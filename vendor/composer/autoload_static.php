@@ -22,6 +22,9 @@ class ComposerStaticInit1546ec00db6ffe0c86c28fb7be3bc6ca
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Rizkussef\\LaravelSnakeToCamelCase\\Middleware\\ConvertCamelToSnakeCase' => __DIR__ . '/../..' . '/src/Middleware/ConvertCamelToSnakeCase.php',
+        'Rizkussef\\LaravelSnakeToCamelCase\\Middleware\\ConvertSnakeToCamelCase' => __DIR__ . '/../..' . '/src/Middleware/ConvertSnakeToCamelCase.php',
+        'Rizkussef\\LaravelSnakeToCamelCase\\Providers\\SnakeToCamelServiceProvider' => __DIR__ . '/../..' . '/src/Providers/SnakeToCamelServiceProvider.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

@@ -7,4 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'Rizkussef\\LaravelSnakeToCamelCase\\Middleware\\ConvertCamelToSnakeCase' => $baseDir . '/src/Middleware/ConvertCamelToSnakeCase.php',
+    'Rizkussef\\LaravelSnakeToCamelCase\\Middleware\\ConvertSnakeToCamelCase' => $baseDir . '/src/Middleware/ConvertSnakeToCamelCase.php',
+    'Rizkussef\\LaravelSnakeToCamelCase\\Providers\\SnakeToCamelServiceProvider' => $baseDir . '/src/Providers/SnakeToCamelServiceProvider.php',
 );
