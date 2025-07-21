@@ -56,7 +56,7 @@ Then edit `config/snake-to-camel.php`:
 return [
     'convert_response' => true, // Enable snake_case → camelCase for responses
     'convert_request'  => true, // Enable camelCase → snake_case for requests
-    'apply_to'         => 'all', // Options: 'all' | 'api'
+    'apply_to'         => 'all', // Options: 'all' | 'api' | 'web'
 ];
 ```
 
