@@ -12,11 +12,11 @@ class SnakeToCamelServiceProvider extends ServiceProvider
     {
         // Publish config so users can override it
         $this->publishes([
-            __DIR__ . '/../../Config/snake-to-camel.php' => config_path('snake-to-camel.php'),
+            __DIR__ . '/../../config/snake-to-camel.php' => config_path('snake-to-camel.php'),
         ], 'config');
         // Merge config so defaults work without publishing
         $this->mergeConfigFrom(
-            __DIR__ . '/../../Config/snake-to-camel.php',
+            __DIR__ . '/../../config/snake-to-camel.php',
             'snake-to-camel'
         );
         // Register response middleware if enabled
