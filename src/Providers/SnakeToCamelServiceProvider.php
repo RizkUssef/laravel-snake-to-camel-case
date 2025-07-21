@@ -22,8 +22,11 @@ class SnakeToCamelServiceProvider extends ServiceProvider
         // Register response middleware if enabled
         if (config('snake-to-camel.convert_response', true)) {
             if (config('snake-to-camel.apply_to') === 'all') {
-                $this->app['router']->middleware(ConvertSnakeToCamelCase::class);
-            } else {
+                $this->app['router']->pushMiddlewareToGroup('api', ConvertSnakeToCamelCase::class);
+                $this->app['router']->pushMiddlewareToGroup('web', ConvertSnakeToCamelCase::class);
+            } elseif (config('snake-to-camel.apply_to') === 'web') {
+                $this->app['router']->pushMiddlewareToGroup('web', ConvertSnakeToCamelCase::class);
+            } elseif (config('snake-to-camel.apply_to') === 'api') {
                 $this->app['router']->pushMiddlewareToGroup('api', ConvertSnakeToCamelCase::class);
             }
         }
@@ -31,8 +34,11 @@ class SnakeToCamelServiceProvider extends ServiceProvider
         // Register request middleware if enabled
         if (config('snake-to-camel.convert_request', true)) {
             if (config('snake-to-camel.apply_to') === 'all') {
-                $this->app['router']->middleware(ConvertCamelToSnakeCase::class);
-            } else {
+                $this->app['router']->pushMiddlewareToGroup('api', ConvertCamelToSnakeCase::class);
+                $this->app['router']->pushMiddlewareToGroup('web', ConvertCamelToSnakeCase::class);
+            } elseif (config('snake-to-camel.apply_to') === 'web') {
+                $this->app['router']->pushMiddlewareToGroup('web', ConvertCamelToSnakeCase::class);
+            } elseif (config('snake-to-camel.apply_to') === 'api') {
                 $this->app['router']->pushMiddlewareToGroup('api', ConvertCamelToSnakeCase::class);
             }
         }
