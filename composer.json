@@ -1,0 +1,19 @@
+{
+    "name": "rizkussef/laravel-snake-to-camel-case",
+    "description": "A Laravel middleware package to automatically convert API response keys from snake_case to camelCase for frontend compatibility, and optionally convert request keys from camelCase to snake_case.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Rizkussef\\LaravelSnakeToCamelCase\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "RizkUssef",
+            "email": "rizkusgt67@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
