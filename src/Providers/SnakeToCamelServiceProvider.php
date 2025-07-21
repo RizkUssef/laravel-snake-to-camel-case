@@ -1,10 +1,10 @@
 <?php
 
-namespace Rizkussef\SnakeToCamel\Providers;
+namespace Rizkussef\LaravelSnakeToCamelCase\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Rizkussef\SnakeToCamel\Middleware\ConvertCamelToSnakeCase;
-use Rizkussef\SnakeToCamel\Middleware\ConvertSnakeToCamelCase;
+use Rizkussef\LaravelSnakeToCamelCase\Middleware\ConvertCamelToSnakeCase;
+use Rizkussef\LaravelSnakeToCamelCase\Middleware\ConvertSnakeToCamelCase;
 
 class SnakeToCamelServiceProvider extends ServiceProvider
 {

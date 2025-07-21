@@ -1,6 +1,6 @@
 <?php
 
-namespace Rizkussef\SnakeToCamel\Middleware;
+namespace Rizkussef\LaravelSnakeToCamelCase\Middleware;
 
 use Closure;
 use Illuminate\Http\JsonResponse;
